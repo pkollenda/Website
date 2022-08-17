@@ -1,5 +1,11 @@
 # options specified here will apply to all posts in this folder
 
+# Authoring options
+author: "Philipp Kollenda"
+format:
+  html: 
+    code-link: true
+    
 # freeze computational output
 # (see https://quarto.org/docs/projects/code-execution.html#freeze)
 freeze: auto

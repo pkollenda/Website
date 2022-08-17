@@ -1,18 +1,13 @@
 ---
 title: "How far does that ferris wheel roll?"
 subtitle: "#tidytuesday data visualization with R, ggplot and ggimage"
-author: "Philipp Kollenda"
 date: "2022-08-09"
 image: "2022-08-09_ferriswheels.png"
 categories: [tidytuesday, dataviz, how-to]
-format:
-  html:
-    code-link: true
 ---
 
 ```{r}
 #| include: false
-#install.packages("downlit")
 library(here)
 ```
 

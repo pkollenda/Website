@@ -1,0 +1,31 @@
+---
+title: "A fancy title"
+subtitle: "#tidytuesday data visualization with R, ggplot and A COOL PACKAGE"
+date: "2022-08-16"
+#image: "2022-08-16_psychometric.png"
+categories: [tidytuesday, dataviz, how-to]
+---
+
+```{r}
+#| include: false
+library(here)
+library(tidyverse)
+```
+
+```{r}
+#| message: false
+#| code-overflow: scroll
+#| layout: [[1, 1]]
+
+# datalist <- tidytuesdayR::tt_load("2022-08-16")
+# write_rds(datalist, here("posts", "tt2022-08-16_psychometric", "data", "psychometric"))
+datalist <- read_rds(here("posts", "tt2022-08-16_psychometric", "data", "psychometric"))
+characters <- datalist$characters
+stats <- datalist$psych_stats
+```
+
+```{r}
+#| message: false
+data <- characters |> filter()
+```
+
