@@ -196,7 +196,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content"><section id="a-productive-rabbit-hole" class="level1"><h1>A productive rabbit hole</h1>
-<p>For week 33 of #TidyTuesday 2022 I had to manually select names from a dataset. So, I typed something like <code>filter(df, name %in% c("The Witcher", "Hamilton", "Westworld", "Sense8")</code>.</p>
+<p>For week 33 of #TidyTuesday 2022 I had to manually select names from a dataset. So, I typed something like</p>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">df</span>, <span class="va">name</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"The Witcher"</span>, <span class="st">"Hamilton"</span>, <span class="st">"Westworld"</span>, <span class="st">"Sense8"</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Do you see what’s wrong with this? No? Congratulations 🎉, you have a much healthier, more pragmatic approach to coding than I do.</p>
 <p>I, on the other hand, was bothered by the fact that the series names were not in alphabetical order. But, <em>“hey”</em>, I thought, R is a <a href="https://www.r-project.org/about.html">“well-developed, simple and effective programming language”</a>, so why not use it to bring my source code into alphabetical order.</p>
 <section id="obviously-i-could-just-type-my-input-in-alphabetical-order-but-where-is-the-fun-in-that" class="level4"><h4 class="anchored" data-anchor-id="obviously-i-could-just-type-my-input-in-alphabetical-order-but-where-is-the-fun-in-that">Obviously, I could just type my input in alphabetical order, but where is the fun in that?</h4>
@@ -217,12 +220,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section><section id="how-to-programatically-sort-your-source-code-into-alphabetical-order." class="level2"><h2 class="anchored" data-anchor-id="how-to-programatically-sort-your-source-code-into-alphabetical-order.">How to programatically sort your source code into alphabetical order.</h2>
 <p>My goal is to get alphabetically sorted output that I can simply copy + paste into my source file (or write to the file with <code>write_lines()</code>).</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"The Witcher"</span>, <span class="st">"Hamilton"</span>, <span class="st">"Westworld"</span>, <span class="st">"Sense8"</span>)</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">print</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"The Witcher"</span>, <span class="st">"Hamilton"</span>, <span class="st">"Westworld"</span>, <span class="st">"Sense8"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="fu">print</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "The Witcher" "Hamilton"    "Westworld"   "Sense8"     </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">dput</span>(<span class="fu">sort</span>(x))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">dput</span>(<span class="fu">sort</span>(x))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>c("Hamilton", "Sense8", "The Witcher", "Westworld")</code></pre>
 </div>

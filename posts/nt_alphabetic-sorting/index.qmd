@@ -7,7 +7,11 @@ categories: [neat-tricks]
 
 # A productive rabbit hole
 
-For week 33 of #TidyTuesday 2022 I had to manually select names from a dataset. So, I typed something like `filter(df, name %in% c("The Witcher", "Hamilton", "Westworld", "Sense8")`.
+For week 33 of #TidyTuesday 2022 I had to manually select names from a dataset. So, I typed something like
+```{r}
+#| eval: false
+filter(df, name %in% c("The Witcher", "Hamilton", "Westworld", "Sense8"))
+```
 
 Do you see what's wrong with this? No? Congratulations 🎉, you have a much healthier, more pragmatic approach to coding than I do.
 
