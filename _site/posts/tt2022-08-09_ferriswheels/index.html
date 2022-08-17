@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.35">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="author" content="Philipp Kollenda">
+<meta name="dcterms.date" content="2022-08-09">
+<title>Data &amp; Development | Philipp Kollenda - How far does that ferris wheel roll?</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script><link rel="stylesheet" href="../../styles.css">
+</head>
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Data &amp; Development | Philipp Kollenda</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+<li class="nav-item">
+    <a class="nav-link" href="../../pages/motivation.html">Motivation</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../pages/research.html">Research</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../pages/presentations.html">Presentations</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../pages/teaching.html">Teaching</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog.html">Blog</a>
+  </li>  
+</ul>
+<ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item">
+    <a class="nav-link" href="../../pages/about.html">About</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/pkollenda"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/philippkollenda"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+<div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns page-full"><div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">How far does that ferris wheel roll?</h1>
+            <p class="subtitle lead">#tidytuesday data visualization with R, ggplot and ggimage</p>
+                                <div class="quarto-categories">
+                <div class="quarto-category">tidytuesday</div>
+                <div class="quarto-category">dataviz</div>
+                <div class="quarto-category">how-to</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Philipp Kollenda </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">August 9, 2022</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content"><section id="using-tidy-tuesday-to-combine-creativity-and-data-visualization-skills." class="level2"><h2 class="anchored" data-anchor-id="using-tidy-tuesday-to-combine-creativity-and-data-visualization-skills.">Using tidy tuesday to combine creativity and data visualization skills.</h2>
+<p>What I love about data visualization is how it combines creative thinking (<strong>what</strong> do I want to show?) with technical programming skills (<strong>how</strong> do I show this?). Nowhere do you combine these two things as elegantly as in the weekly <a href="https://github.com/rfordatascience/tidytuesday">tidy tuesday</a> <em>challenges</em>. Here, data wizards around the word play and practice with fascinating datasets from chocolate bar ratings to the mobility of ERASMUS students to – this week – data on ferris wheels around the world.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> As someone who goes pale in any kind of rollercoaster, ferris wheels feel just about advantageous enough to start my own tidy tuesday journey.</p>
+<p><img src="images/speech-bubble_20220809.png" class="img-fluid"></p>
+<section id="where-to-start" class="level3"><h3 class="anchored" data-anchor-id="where-to-start">Where to start</h3>
+<p>Before opening R, I think about what I find fascinating about the topic and what I want to convey with my visualization. Here I am sticking to some descriptive analysis and won’t overthink it, so let’s just go with one of the first thing that came to my mind… ferris wheels are really big!</p>
+<blockquote class="blockquote">
+<p>If a ferris wheel would be an actual wheel, how far would it travel during one rotation?<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+</blockquote>
+<p>The message gives me part of the structure for the visualization. Here, I want to select a few examples from different countries and show the diameter on the x-axis. I’ve created <em>a lot</em> of horizontal bar charts for a consultancy this summer, so naturally this is my starting point.</p>
+<p>A great thing about these just-for-fun challenges is that you can use them to add 1-2 new skills to your visualization toolbox. For this challenge I want to learn two things:</p>
+<ol type="1">
+<li>How do I add icons (ferris wheels 🎡, obviously) instead of dots in the chart?</li>
+<li>How do I add country flags on the y-axis.</li>
+</ol>
+<p>I don’t want to spend the entire evening on this, so I think it is important to limit myself to only these two new features. I will also concentrate on them and not care too much (yet) about other things, like titles, background, themes, etc…</p>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Because this isn’t a mystery novel, I am giving away how the visualization will look like in the end. Don’t click if you want to keep the suspense…</p>
+</div>
+</div>
+</section><section id="the-project-is-taking-shape" class="level3"><h3 class="anchored" data-anchor-id="the-project-is-taking-shape">The project is taking shape</h3>
+<p>With these initial thoughts out of the way, I can roughly sketch the visualization process and outline of this post.</p>
+<ol type="1">
+<li>
+<a href="#first-look">A first look at the data.</a> Choose which points to show.</li>
+<li>
+<a href="#first-graph">Create the simplest graph</a> that shows the intended message.</li>
+<li>Add <a href="#icons">the ferris wheel</a> icons.</li>
+<li>Add <a href="#flags">the country flags</a>.</li>
+<li>
+<a href="#clean-up">Clean up the graph</a>.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/ready-cat.gif" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</section><section id="first-look" class="level3"><h3 class="anchored" data-anchor-id="first-look">A first look at the data</h3>
+<p>Let’s first install the necessary packages and load and save the data.</p>
+<div>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#install.packages(c("tidytuesdayR", "tidyverse", "here", "ggimage", "countrycode", "ggtext"))</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://here.r-lib.org/">here</a></span><span class="op">)</span></span>
+<span><span class="co">#data &lt;- tidytuesdayR::tt_load("2022-08-09")$wheels</span></span>
+<span><span class="co">#write_rds(data, here("posts", "tt2022-08-09_ferriswheels", "data", "wheels"))</span></span>
+<span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_rds.html">read_rds</a></span><span class="op">(</span><span class="fu"><a href="https://here.r-lib.org//reference/here.html">here</a></span><span class="op">(</span><span class="st">"posts"</span>, <span class="st">"tt2022-08-09_ferriswheels"</span>, <span class="st">"data"</span>, <span class="st">"wheels"</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell quarto-layout-panel">
+
+</div>
+</div>
+<p>The entire dataset collects 22 variables on 73 ferris wheels in 26 different countries. This is way to much information to display, so let’s keep only a handful of ferris wheels and only information on their name, country, height and diameter.</p>
+<div class="cell">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">data</span> <span class="op">&lt;-</span> <span class="va">data</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">country</span>, <span class="va">name</span>, <span class="va">height</span>, <span class="va">diameter</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">country</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">height</span> <span class="op">==</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span><span class="op">(</span><span class="va">height</span>, na.rm <span class="op">=</span> <span class="cn">T</span><span class="op">)</span>,</span>
+<span>         <span class="va">country</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Austria"</span>, <span class="st">"Canada"</span>, <span class="st">"China"</span>, <span class="st">"Mexico"</span>, <span class="st">"UK"</span>, <span class="st">"USA"</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">ungroup</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/across.html">across</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">height</span>, <span class="va">diameter</span><span class="op">)</span>, <span class="va">round</span>, <span class="fl">0</span><span class="op">)</span>,</span>
+<span>         country <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">country</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>This is the data that we will use. As a comparison, I will add data from a more typical wheel: my dutch bicycle wheel.</p>
+<div class="cell">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind.html">bind_rows</a></span><span class="op">(</span><span class="va">data</span>, <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>country <span class="op">=</span> <span class="st">"Netherlands"</span>, name <span class="op">=</span> <span class="st">"Philipp's bike wheel"</span>, height <span class="op">=</span> <span class="fl">0.67</span>, diameter <span class="op">=</span> <span class="fl">0.67</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped">
+<thead><tr class="header">
+<th style="text-align: left;">country</th>
+<th style="text-align: left;">name</th>
+<th style="text-align: right;">height</th>
+<th style="text-align: right;">diameter</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">China</td>
+<td style="text-align: left;">Beijing Great Wheel</td>
+<td style="text-align: right;">693.00</td>
+<td style="text-align: right;">643.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">USA</td>
+<td style="text-align: left;">Golden Gate Flyer</td>
+<td style="text-align: right;">728.00</td>
+<td style="text-align: right;">700.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">UK</td>
+<td style="text-align: left;">London Eye</td>
+<td style="text-align: right;">443.00</td>
+<td style="text-align: right;">394.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Canada</td>
+<td style="text-align: left;">Niagara SkyWheel</td>
+<td style="text-align: right;">175.00</td>
+<td style="text-align: right;">167.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Mexico</td>
+<td style="text-align: left;">Star of Puebla</td>
+<td style="text-align: right;">262.00</td>
+<td style="text-align: right;">229.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Austria</td>
+<td style="text-align: left;">Wiener Riesenrad</td>
+<td style="text-align: right;">212.00</td>
+<td style="text-align: right;">200.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Netherlands</td>
+<td style="text-align: left;">Philipp’s bike wheel</td>
+<td style="text-align: right;">0.67</td>
+<td style="text-align: right;">0.67</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section id="first-graph" class="level3"><h3 class="anchored" data-anchor-id="first-graph">The simplest-possible graph</h3>
+<div class="cell">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">p</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">data</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>y <span class="op">=</span> <span class="fu"><a href="https://forcats.tidyverse.org/reference/fct_rev.html">fct_rev</a></span><span class="op">(</span><span class="va">country</span><span class="op">)</span>, x <span class="op">=</span> <span class="va">diameter</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">""</span>, y <span class="op">=</span> <span class="st">""</span>,</span>
+<span>       <span class="co"># x = "Diameter of the highest ferris wheel in the country (in meter)"</span></span>
+<span>       title <span class="op">=</span> <span class="st">"How far do you travel during one rotation in the largest ferris wheels?"</span>,</span>
+<span>       caption <span class="op">=</span> <span class="st">"Data from ferriswheel package by Emil Hvitfeldt, #tidytuesday August 2022"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_x_continuous</a></span><span class="op">(</span>limits <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">800</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>panel.grid <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">p</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_segment.html">geom_segment</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>y <span class="op">=</span> <span class="va">country</span>, yend <span class="op">=</span> <span class="va">country</span>, x <span class="op">=</span> <span class="fl">0</span>, xend <span class="op">=</span> <span class="va">diameter</span><span class="op">)</span>, linetype <span class="op">=</span> <span class="st">"dashed"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/so-bad.gif" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>This isn’t pretty, but that’s not the point. Having a bare-minimum working example helps to think about whether the graph type fits and what can be done to emphasise the key message. It also helps to create a to-do list of things to improve: like a different order of ferris wheels, maybe adding an empty row to separate the bike data from the ferris wheel data, a label or subtitle that puts the ferris wheel in relation to the bike wheel, another background color, adding ‘meter’ to the x-axis and more). But let us first tackle the two big learnings that I wanted to get out of the challenge: replacing the dots with icons (now I also need a bike, 🚲) and adding the country flags.</p>
+</section><section id="icons" class="level3"><h3 class="anchored" data-anchor-id="icons">Add the ferris wheel icons</h3>
+<p>As always, there are many ways to Rome. Here I am going with the <a href="https://github.com/GuangchuangYu/ggimage">ggimage package</a> maintained by Guangchuang YU. I have not used this before, but a look at the <a href="https://yulab-smu.top/pkgdocs/ggimage.html">online vignette</a> makes me hopeful that I can use this for the ferris wheel icons and the country flags 😃</p>
+<p>There are two ways we can go. The first is to use the <code><a href="https://rdrr.io/pkg/ggimage/man/geom_emoji.html">ggimage::geom_emoji</a></code> and to insert the ferris wheel and bicycle emojis that I have used throughout the post. That seems simple, we just need the unicode to pass it to the function. That’s easy to look up at, e.g.&nbsp;<a href="https://unicode.org/emoji/charts/full-emoji-list.html" class="uri">https://unicode.org/emoji/charts/full-emoji-list.html</a>.</p>
+<div class="cell">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">data</span><span class="op">$</span><span class="va">size</span> <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/if_else.html">if_else</a></span><span class="op">(</span><span class="va">data</span><span class="op">$</span><span class="va">name</span> <span class="op">==</span> <span class="st">"Philipp's bike wheel"</span>, <span class="fl">0.075</span>, <span class="va">data</span><span class="op">$</span><span class="va">diameter</span> <span class="op">/</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span><span class="op">(</span><span class="va">data</span><span class="op">$</span><span class="va">diameter</span><span class="op">)</span> <span class="op">*</span> <span class="fl">0.25</span><span class="op">)</span></span>
+<span><span class="va">p</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_segment.html">geom_segment</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>y <span class="op">=</span> <span class="fu"><a href="https://forcats.tidyverse.org/reference/fct_rev.html">fct_rev</a></span><span class="op">(</span><span class="va">country</span><span class="op">)</span>, yend <span class="op">=</span> <span class="fu"><a href="https://forcats.tidyverse.org/reference/fct_rev.html">fct_rev</a></span><span class="op">(</span><span class="va">country</span><span class="op">)</span>, x <span class="op">=</span> <span class="fl">0</span>, xend <span class="op">=</span> <span class="va">diameter</span><span class="op">)</span>, linetype <span class="op">=</span> <span class="st">"dashed"</span>, color <span class="op">=</span> <span class="st">"gray"</span>, position <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/position_nudge.html">position_nudge</a></span><span class="op">(</span>y <span class="op">=</span> <span class="op">-</span> <span class="fl">0.25</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggimage</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/ggimage/man/geom_emoji.html">geom_emoji</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>image <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/if_else.html">if_else</a></span><span class="op">(</span><span class="va">name</span> <span class="op">==</span> <span class="st">"Philipp's bike wheel"</span>, <span class="st">"1f6b2"</span>, <span class="st">"1f3a1"</span><span class="op">)</span><span class="op">)</span>, position <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/position_nudge.html">position_nudge</a></span><span class="op">(</span>y <span class="op">=</span> <span class="op">(</span><span class="va">data</span><span class="op">$</span><span class="va">size</span> <span class="op">/</span> <span class="fl">0.3</span><span class="op">)</span> <span class="op">-</span> <span class="fl">0.25</span><span class="op">)</span>, size <span class="op">=</span> <span class="va">data</span><span class="op">$</span><span class="va">size</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>This looks OK. The most complicated part was actually that I wanted to scale the size of the image by the size of the ferris wheel, which required making an extra <em>size</em> column and experimenting a lot with position_nudge to let the dashed line go to the bottom of the icon, not to the middle. But I am not super happy with the emoji’s, so let’s try to download some images of ferris wheels and use those with <code><a href="https://rdrr.io/pkg/ggimage/man/geom_image.html">ggimage::geom_image()</a></code> instead.</p>
+<p>I’ll first download a simple transparent ferris wheel png file <a href="https://www.cleanpng.com/png-drawing-ferris-wheel-2236979/">(from here)</a> and use a bike icon <a href="https://illustoon.com/?id=7237">(from here)</a>.</p>
+<div class="cell">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">ferris_path</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://here.r-lib.org//reference/here.html">here</a></span><span class="op">(</span><span class="st">"posts"</span>, <span class="st">"tt2022-08-09_ferriswheels"</span>, <span class="st">"images"</span>, <span class="st">"ferriswheel.png"</span><span class="op">)</span></span>
+<span><span class="va">bike_path</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://here.r-lib.org//reference/here.html">here</a></span><span class="op">(</span><span class="st">"posts"</span>, <span class="st">"tt2022-08-09_ferriswheels"</span>, <span class="st">"images"</span>, <span class="st">"bike.png"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">p1</span> <span class="op">&lt;-</span> <span class="va">p</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_segment.html">geom_segment</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>y <span class="op">=</span> <span class="fu"><a href="https://forcats.tidyverse.org/reference/fct_rev.html">fct_rev</a></span><span class="op">(</span><span class="va">country</span><span class="op">)</span>, yend <span class="op">=</span> <span class="fu"><a href="https://forcats.tidyverse.org/reference/fct_rev.html">fct_rev</a></span><span class="op">(</span><span class="va">country</span><span class="op">)</span>, x <span class="op">=</span> <span class="fl">0</span>, xend <span class="op">=</span> <span class="va">diameter</span><span class="op">)</span>,</span>
+<span>               linetype <span class="op">=</span> <span class="st">"dashed"</span>, color <span class="op">=</span> <span class="st">"gray"</span>, </span>
+<span>               position <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/position_nudge.html">position_nudge</a></span><span class="op">(</span>y <span class="op">=</span> <span class="op">-</span> <span class="fl">0.25</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggimage</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/ggimage/man/geom_image.html">geom_image</a></span><span class="op">(</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>image <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/if_else.html">if_else</a></span><span class="op">(</span><span class="va">data</span><span class="op">$</span><span class="va">name</span> <span class="op">==</span> <span class="st">"Philipp's bike wheel"</span>, <span class="va">bike_path</span>, <span class="va">ferris_path</span><span class="op">)</span><span class="op">)</span>, </span>
+<span>    position <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/position_nudge.html">position_nudge</a></span><span class="op">(</span>y <span class="op">=</span> <span class="op">(</span><span class="va">data</span><span class="op">$</span><span class="va">size</span> <span class="op">/</span> <span class="fl">0.27</span><span class="op">)</span> <span class="op">-</span> <span class="fl">0.25</span>, </span>
+<span>                              x <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/if_else.html">if_else</a></span><span class="op">(</span><span class="va">data</span><span class="op">$</span><span class="va">name</span> <span class="op">==</span> <span class="st">"Philipp's bike wheel"</span>, <span class="fl">15</span>, <span class="fl">0</span><span class="op">)</span><span class="op">)</span>, </span>
+<span>    size <span class="op">=</span> <span class="va">data</span><span class="op">$</span><span class="va">size</span> <span class="op">*</span> <span class="fl">1.5</span><span class="op">)</span></span>
+<span><span class="va">p1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>I’m happy with this. Onwards to do the country flags!</p>
+</section><section id="flags" class="level3"><h3 class="anchored" data-anchor-id="flags">Add the country flags</h3>
+<p>In the plots so far, I kept the country names on the y-axis. However, I would prefer to use the actual names of the ferris wheel and replace the country names with flags. We’ll continue with the ggimage package, which contains a geom_flag() function. The package expects country codes (e.g.&nbsp;NL, US), so we need to transform the names <del>by hand</del> using the <a href="https://github.com/vincentarelbundock/countrycode">countrycodes package</a>.</p>
+<div class="cell">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create the country labels from the country names</span></span>
+<span><span class="va">data</span><span class="op">$</span><span class="va">code</span> <span class="op">&lt;-</span> <span class="fu">countrycode</span><span class="fu">::</span><span class="fu"><a href="https://vincentarelbundock.github.io/countrycode/reference/countrycode.html">countrycode</a></span><span class="op">(</span><span class="va">data</span><span class="op">$</span><span class="va">country</span>, origin <span class="op">=</span> <span class="st">"country.name"</span>, destination <span class="op">=</span> <span class="st">"iso2c"</span><span class="op">)</span> </span>
+<span></span>
+<span><span class="co"># Sort the factor levels of the 'name' variable alphabetically *by country* (the combination of arrange and fct_inorder does that, there are surely smarter ways)</span></span>
+<span><span class="va">data</span> <span class="op">&lt;-</span> <span class="va">data</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="va">country</span><span class="op">)</span></span>
+<span><span class="va">data</span><span class="op">$</span><span class="va">name</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://forcats.tidyverse.org/reference/fct_inorder.html">fct_inorder</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">data</span><span class="op">$</span><span class="va">name</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Create the graph again from scratch because instead of mapping the country to the y axis, I now</span></span>
+<span><span class="co"># map the name to the y axis. Again, surely there are smarter ways to do that...</span></span>
+<span><span class="co"># I also move the flags a bit to the left of the x axis and expand the limits of the plot accordingly.</span></span>
+<span><span class="va">p2</span> <span class="op">&lt;-</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">data</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>y <span class="op">=</span> <span class="fu"><a href="https://forcats.tidyverse.org/reference/fct_rev.html">fct_rev</a></span><span class="op">(</span><span class="va">name</span><span class="op">)</span>, x <span class="op">=</span> <span class="va">diameter</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_segment.html">geom_segment</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>y <span class="op">=</span> <span class="fu"><a href="https://forcats.tidyverse.org/reference/fct_rev.html">fct_rev</a></span><span class="op">(</span><span class="va">name</span><span class="op">)</span>, yend <span class="op">=</span> <span class="fu"><a href="https://forcats.tidyverse.org/reference/fct_rev.html">fct_rev</a></span><span class="op">(</span><span class="va">name</span><span class="op">)</span>, x <span class="op">=</span> <span class="fl">0</span>, xend <span class="op">=</span> <span class="va">diameter</span><span class="op">)</span>,</span>
+<span>               linetype <span class="op">=</span> <span class="st">"dashed"</span>, color <span class="op">=</span> <span class="st">"gray"</span>, </span>
+<span>               position <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/position_nudge.html">position_nudge</a></span><span class="op">(</span>y <span class="op">=</span> <span class="op">-</span> <span class="fl">0.25</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggimage</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/ggimage/man/geom_image.html">geom_image</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>image <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/if_else.html">if_else</a></span><span class="op">(</span><span class="va">name</span> <span class="op">==</span> <span class="st">"Philipp's bike wheel"</span>, <span class="va">bike_path</span>, <span class="va">ferris_path</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>                      position <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/position_nudge.html">position_nudge</a></span><span class="op">(</span>y <span class="op">=</span> <span class="op">(</span><span class="va">data</span><span class="op">$</span><span class="va">size</span> <span class="op">/</span> <span class="fl">0.27</span><span class="op">)</span> <span class="op">-</span> <span class="fl">0.25</span>,</span>
+<span>                                                x <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/if_else.html">if_else</a></span><span class="op">(</span><span class="va">data</span><span class="op">$</span><span class="va">name</span> <span class="op">==</span> <span class="st">"Philipp's bike wheel"</span>, <span class="fl">15</span>, <span class="fl">0</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>                      size <span class="op">=</span> <span class="va">data</span><span class="op">$</span><span class="va">size</span> <span class="op">*</span> <span class="fl">1.5</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggimage</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/ggimage/man/geom_flag.html">geom_flag</a></span><span class="op">(</span>x <span class="op">=</span> <span class="op">-</span><span class="fl">70</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>image <span class="op">=</span> <span class="va">code</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">""</span>, y <span class="op">=</span> <span class="st">""</span>,</span>
+<span>       title <span class="op">=</span> <span class="st">"How far do you travel during one rotation in the largest ferris wheels?"</span>,</span>
+<span>       caption <span class="op">=</span> <span class="st">"Data from ferriswheel package by Emil Hvitfeldt, #tidytuesday August 2022"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_x_continuous</a></span><span class="op">(</span>limits <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">50</span>, <span class="fl">800</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>panel.grid <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">p2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>This looks fine. The main headache in the code chunk above was replacing the mapping of the y axis to show the name (and not the country) and correcting the ordering of the observations.</p>
+</section><section id="clean-up" class="level3"><h3 class="anchored" data-anchor-id="clean-up">Clean up the graph</h3>
+<p>I am happy with how the flags and ferris wheels turned out and am now ready to go back to the to-do list from the beginning with some minor things to clean up the graph. This is a playful challenge and ferris wheels are fun, so let’s go for a <em>very</em> light pinkish background colour. I am also adding a text box (using the ggtext package) to use my bicycle wheel as an example to show just how big these ferris wheels are.</p>
+<div class="cell">
+<details><summary>Code</summary><div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">turns</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/pull.html">pull</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="va">data</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/which.html">which</a></span><span class="op">(</span><span class="va">data</span><span class="op">$</span><span class="va">diameter</span> <span class="op">==</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span><span class="op">(</span><span class="va">data</span><span class="op">$</span><span class="va">diameter</span><span class="op">)</span><span class="op">)</span>, <span class="st">"diameter"</span><span class="op">]</span> <span class="op">/</span> <span class="va">data</span><span class="op">[</span><span class="va">data</span><span class="op">$</span><span class="va">name</span> <span class="op">==</span> <span class="st">"Philipp's bike wheel"</span>, <span class="st">"diameter"</span><span class="op">]</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">data</span><span class="op">$</span><span class="va">name</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://forcats.tidyverse.org/reference/fct_relevel.html">fct_relevel</a></span><span class="op">(</span><span class="va">data</span><span class="op">$</span><span class="va">name</span>, <span class="st">"Philipp's bike wheel"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">p3</span> <span class="op">&lt;-</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">data</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>y <span class="op">=</span> <span class="fu"><a href="https://forcats.tidyverse.org/reference/fct_rev.html">fct_rev</a></span><span class="op">(</span><span class="va">name</span><span class="op">)</span>, x <span class="op">=</span> <span class="va">diameter</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_segment.html">geom_segment</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>y <span class="op">=</span> <span class="fu"><a href="https://forcats.tidyverse.org/reference/fct_rev.html">fct_rev</a></span><span class="op">(</span><span class="va">name</span><span class="op">)</span>, yend <span class="op">=</span> <span class="fu"><a href="https://forcats.tidyverse.org/reference/fct_rev.html">fct_rev</a></span><span class="op">(</span><span class="va">name</span><span class="op">)</span>, x <span class="op">=</span> <span class="fl">0</span>, xend <span class="op">=</span> <span class="va">diameter</span><span class="op">)</span>,</span>
+<span>               linetype <span class="op">=</span> <span class="st">"dashed"</span>, color <span class="op">=</span> <span class="st">"gray"</span>, alpha <span class="op">=</span> <span class="fl">0.5</span>,</span>
+<span>               position <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/position_nudge.html">position_nudge</a></span><span class="op">(</span>y <span class="op">=</span> <span class="op">-</span><span class="fl">0.25</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggimage</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/ggimage/man/geom_image.html">geom_image</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>image <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/if_else.html">if_else</a></span><span class="op">(</span><span class="va">name</span> <span class="op">==</span> <span class="st">"Philipp's bike wheel"</span>, <span class="va">bike_path</span>, <span class="va">ferris_path</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>                      position <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/position_nudge.html">position_nudge</a></span><span class="op">(</span>y <span class="op">=</span> <span class="op">(</span><span class="va">data</span><span class="op">$</span><span class="va">size</span> <span class="op">/</span> <span class="fl">0.27</span><span class="op">)</span> <span class="op">-</span> <span class="fl">0.25</span>,</span>
+<span>                                                x <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/if_else.html">if_else</a></span><span class="op">(</span><span class="va">data</span><span class="op">$</span><span class="va">name</span> <span class="op">==</span> <span class="st">"Philipp's bike wheel"</span>, <span class="fl">15</span>, <span class="fl">0</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>                      size <span class="op">=</span> <span class="va">data</span><span class="op">$</span><span class="va">size</span> <span class="op">*</span> <span class="fl">1.5</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggimage</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/ggimage/man/geom_flag.html">geom_flag</a></span><span class="op">(</span>x <span class="op">=</span> <span class="op">-</span><span class="fl">70</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>image <span class="op">=</span> <span class="va">code</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">""</span>, y <span class="op">=</span> <span class="st">""</span>,</span>
+<span>       title <span class="op">=</span> <span class="st">"How far do you travel with one rotation of the largest wheels in the world?"</span>,</span>
+<span>       caption <span class="op">=</span> <span class="st">"Visualization by Philipp Kollenda / @pkollenda . Accompanying blog post on my website. \n Data from ferriswheel package by Emil Hvitfeldt, #tidytuesday August 2022"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggtext</span><span class="fu">::</span><span class="fu"><a href="https://wilkelab.org/ggtext/reference/geom_textbox.html">geom_textbox</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">300</span>, y <span class="op">=</span> <span class="fl">6.75</span>, hjust <span class="op">=</span> <span class="fl">0</span>,</span>
+<span>                           label <span class="op">=</span> <span class="fu">glue</span><span class="fu">::</span><span class="fu"><a href="https://glue.tidyverse.org/reference/glue.html">glue</a></span><span class="op">(</span><span class="st">"My bike wheel has to &lt;span style='color: red;'&gt;turn {turns} times&lt;/span&gt; to travel the same distance as one rotation with the largest ferris wheel."</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>                       fill <span class="op">=</span> <span class="st">"papayawhip"</span>, width <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/grid/unit.html">unit</a></span><span class="op">(</span><span class="fl">6</span>, <span class="st">"cm"</span><span class="op">)</span>, size <span class="op">=</span> <span class="fl">3</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_x_continuous</a></span><span class="op">(</span>limits <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">50</span>, <span class="fl">800</span><span class="op">)</span>, labels <span class="op">=</span> <span class="fu">scales</span><span class="fu">::</span><span class="fu"><a href="https://scales.r-lib.org/reference/label_number.html">label_number</a></span><span class="op">(</span>suffix <span class="op">=</span> <span class="st">" meter"</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>panel.grid <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>, legend.position <span class="op">=</span> <span class="st">"none"</span>,</span>
+<span>        plot.title.position <span class="op">=</span> <span class="st">"plot"</span>, plot.title <span class="op">=</span> <span class="fu">ggtext</span><span class="fu">::</span><span class="fu"><a href="https://wilkelab.org/ggtext/reference/element_textbox.html">element_textbox_simple</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">20</span>, padding <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">margin</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">10</span>, <span class="fl">10</span>, <span class="fl">20</span>, <span class="fl">10</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>        axis.text.y <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">12</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>plot.background <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_rect</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="st">"#FFFAFA"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">p3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section><section id="and-thats-it." class="level3"><h3 class="anchored" data-anchor-id="and-thats-it.">And that’s it.</h3>
+<p>I am happy with how this visualization turned out and glad I learned something about how to insert flags, icons and other images with the ggimage package. I will now hop on my bicycle and think of the Golden Gate Flyer… approximately every 1045 (bike) wheel turn.</p>
+
+
+</section></section><div id="quarto-appendix" class="default"><section class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+<ol>
+<li id="fn1" role="doc-endnote"><p>Sidenote: <a href="https://twitter.com/nsgrantham">Neal Grantham</a> has a cool <a href="https://nsgrantham.shinyapps.io/tidytuesdayrocks/">Shiny app</a> to browse previous tidy tuesday submissions.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p>Perceptive readers may have noticed that this is just the diameter of the wheel. But, doesn’t that sound much less exciting?<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol></section></div></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

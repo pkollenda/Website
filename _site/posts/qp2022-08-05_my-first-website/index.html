@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.35">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Philipp Kollenda">
+<meta name="dcterms.date" content="2022-08-06">
+
+<title>Data &amp; Development | Philipp Kollenda - Build a simple website with R and Quarto in under 30 10 minutes.</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Data &amp; Development | Philipp Kollenda</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../pages/motivation.html">Motivation</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../pages/research.html">Research</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../pages/presentations.html">Presentations</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../pages/teaching.html">Teaching</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog.html">Blog</a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../pages/about.html">About</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/pkollenda"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/philippkollenda"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Build a simple website with R and Quarto in under <del>30</del> 10 minutes.</h1>
+            <p class="subtitle lead">And then spend hours tweaking it.</p>
+                                <div class="quarto-categories">
+                <div class="quarto-category">quarto</div>
+                <div class="quarto-category">how-to</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Philipp Kollenda </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">August 6, 2022</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<p>A week has past since rstudio::conf 2022 and my excitment about Quarto, a new <a href="https://quarto.org/">multi-output, language agnostic publishing system</a> has only grown with <a href="https://mine-cetinkaya-rundel.github.io/quarto-tip-a-day/">every</a> <a href="https://blog.djnavarro.net/posts/2022-04-20_porting-to-quarto/">new</a> <a href="https://github.com/mcanouil/awesome-quarto">amazing</a> <a href="https://www.youtube.com/watch?v=yvi5uXQMvu4">resource</a> that people shared on getting started with Quarto. Now that other work has calmed down for me, I finally have time to give some new features a try and write about them.</p>
+<p>I am especially excited about the possibility to quickly build websites (for blogs, teaching, sharing notes, publishing research etc.) with Quarto, without having to leave my R environment where I do all my coding anyways. Let’s get started!</p>
+<p><img src="images/speech-bubble.png" class="img-fluid"></p>
+<p>Let’s start by building a very simple website. I have three things on my wishlist:</p>
+<ul>
+<li>the website should have multiple pages,</li>
+<li>an intuitive way to navigate between them and</li>
+<li>show some images, code and output.</li>
+</ul>
+<p>We won’t worry about hosting yet (that’s for another post) and simply use <a href="https://quarto.pub">quarto.pub</a> (more on that below).</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+tl;dr: Here is how to get a website up and running in three steps
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>In RStudio, start a new project and choose <code>Quarto website</code>.</li>
+<li>Change content in the .qmd files and configuration in the .yml file.</li>
+<li>Publish to quarto pub via the terminal.</li>
+</ol>
+</div>
+</div>
+<p>Here is the final website <a href="https://philipp.quarto.pub/my-first-website" class="uri">https://philipp.quarto.pub/my-first-website</a> But, let’s look at each of the steps in more detail.</p>
+<section id="step-1-create-the-quarto-website-project" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-create-the-quarto-website-project">Step 1: Create the Quarto website project</h3>
+<p>In RStudio, we create a new project and choose <code>Quarto website</code> from the list of available templates. If that does not show up for you, chances are that you need to update RStudio to the latest version (i.e.&nbsp;RStudio 2022.07.1+554 “Spotted Wakerobin” works).</p>
+<p>A click on create project will create the scaffolding for our new website:</p>
+<ol type="1">
+<li>Two .qmd files that will become pages on our website.</li>
+<li>A .yml file that we use to keep track of the options.</li>
+<li>A styles.css file that we use to customize the appearance of the website<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</li>
+</ol>
+<p>If we click on “Render” (or use Shift + Cmd + K) the document will (hopefully) render and show up in the Viewer pane of RStudio. That’s all and we could already publish this as a functioning website (🥳), but let’s add at least a minimal amount of our own content.</p>
+</section>
+<section id="step-2-changing-the-content-.qmd-and-the-structure-.yml-of-our-website." class="level3">
+<h3 class="anchored" data-anchor-id="step-2-changing-the-content-.qmd-and-the-structure-.yml-of-our-website.">Step 2: Changing the content (.qmd) and the structure (.yml) of our website.</h3>
+<p>When we initialized the project, Quarto graciously already created two .qmd files which will be two pages on our website and a .yml file which records settings about the structure, general options, appearance and so on.</p>
+<p>We are going to change the default content of the index.qmd file and the name and content of the about.qmd file. To do that, simply open the respective .qmd file and edit what you want to change. We won’t focus here on how to author Quarto documents, but the documentation on <a href="https://quarto.org/docs/authoring" class="uri">https://quarto.org/docs/authoring</a> is amazing. For completeness, I put the code that I used in our website at the bottom of this post.</p>
+<p>Now, ideally we want to see the effects of our changes immediately. There are two options. We can switch on “Render on Save” and see the updated page in RStudios Viewer pane whenever we save. Or – way cooler IMHO – we can <em>preview</em> the entire website by typing <code>quarto preview</code> in the terminal field of RStudio (next to the console, <a href="#terminal"><strong>where???</strong></a>).</p>
+<div class="callout-note callout callout-style-simple">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Preview a website without publishing it by typing <code>quarto preview</code> in the terminal.</p>
+</div>
+</div>
+</div>
+<p>Where the .qmd files tell the browser what the website should display, the .yml file tells the browser how to structure the website. This is where you change the design, add pages, choose a logo and so much more. We’ll not go into detail on the site configuration yaml here and just focus on getting a simple website up-and-running, but luckily <a href="https://quarto.org/docs/websites/website-navigation.html">the Quarto team has you covered</a>.</p>
+</section>
+<section id="step-3-publish-your-website." class="level3">
+<h3 class="anchored" data-anchor-id="step-3-publish-your-website.">Step 3: Publish your website.</h3>
+<p>This is it! It is time to let our creation leave the confines of the local computer and roam the world wide web. But we need a home address for our website and for the sake of using the simplest possible solution we will publish the website using <a href="https://quartopub.com/">quarto pub</a>.</p>
+<p>If you are already signed up and authenticated for Quarto Pub, great! Keep reading below.</p>
+<details>
+<summary>
+Otherwise click here to show the details.
+</summary>
+<p>If you still need to make an account, go to <a href="https://quartopub.com/">the quarto pub website (https://quartopub.com/)</a>, click <em>Sign up</em>, confirm your email and choose a username. The username will be in the URL of every website you create, so best to choose something highly professional 🤓.</p>
+</details>
+<p>Once you created your account (or if you already had one), open <a href="https://quartopub.com" class="uri">https://quartopub.com</a> (this should show an empty profile page if you have not previously created a website) and just keep it open.</p>
+<p>Now comes the magic. Head back to RStudio and type <code>quarto publish quarto-pub</code> in the terminal (<a href="#terminal">termi-WHAT?</a>). If you are logged in to quarto pub in a browser, the terminal will show <em>? Publish with account:</em>, your email address on the next line and in gray the words <em>Use another account…</em>. Don’t be fooled (like I was). This is not an error message and the console is <strong>not</strong> trying to <strong>tell you</strong> to use another account, it’s merely asking… So, confidently press Enter and it will ask about the site name. Press enter again and voilà, Quarto will upload your .qmd and .yml files to quarto pub and publish your website.</p>
+<p>You (and everyone else!) can now see your website at <code>YOUR-USERNAME.quarto.pub/YOUR-WEBSITE-NAME/</code>. Here is the site that I just created in during this post <a href="https://philipp.quarto.pub/my-first-website/" class="uri">https://philipp.quarto.pub/my-first-website/</a>.</p>
+<p><img src="images/amy.gif" class="img-fluid"></p>
+<hr>
+</section>
+<section id="appendix" class="level1">
+<h1>Appendix</h1>
+<section id="stupid-mistakes-that-tripped-me-up-and-that-you-dont-need-to-repeat." class="level4">
+<h4 class="anchored" data-anchor-id="stupid-mistakes-that-tripped-me-up-and-that-you-dont-need-to-repeat.">Stupid mistakes that tripped me up and that you don’t need to repeat.</h4>
+<section id="terminal" class="level5">
+<h5 class="anchored" data-anchor-id="terminal">Where is the terminal in RStudio?</h5>
+<p>If you do not use the terminal often it is easy to overlook it even though it is hidden in plain sight. <img src="images/terminal.png" class="img-fluid"> ##### Why does quarto pub ask me a different name / email address… When I first published this site, I diligently typed <code>quarto publish quarto-pub</code> in the terminal and was greeted by the message: “<em>Use a different name…</em>”.</p>
+</section>
+<section id="i-fixed-a-typo-but-already-published-the-site-what-now" class="level5">
+<h5 class="anchored" data-anchor-id="i-fixed-a-typo-but-already-published-the-site-what-now">I fixed a typo but already published the site, what now?</h5>
+<p>Don’t despair, unlike certain social media sites, quarto.pub does come with an edit button. Simply change what you want to change in the .qmd or .yml files and don’t forget to publish again via the termina. The console will ask you if you want to update the already published site… yes, please! That last step is easy to miss though, because RStudio’s Render on Save and Preview make it so easy to expect that everything just updates automatically.</p>
+<hr>
+</section>
+</section>
+<section id="the-content-of-the-index.qmd-file." class="level4">
+<h4 class="anchored" data-anchor-id="the-content-of-the-index.qmd-file.">The content of the index.qmd file.</h4>
+<p>Note that I am not actually including the first line, only the part beginning with the yaml dashes (<code>---</code>).</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>title<span class="sc">:</span> <span class="st">"Welcome to my first website"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>This is a Quarto website that I created <span class="cf">in</span> just a few minutes. Read about it here and find amazing resources on <span class="sc">&lt;</span>https<span class="sc">:</span><span class="er">//</span>quarto.org<span class="sc">/</span>docs<span class="sc">/</span>websites<span class="sc">&gt;</span>.</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="sc">!</span>[](images<span class="sc">/</span>screenshot.png)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="the-content-of-the-about.qmd-file." class="level4">
+<h4 class="anchored" data-anchor-id="the-content-of-the-about.qmd-file.">The content of the about.qmd file.</h4>
+<div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Ferries Wheels"</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## Some fun with ferries wheels</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: ferries-plot</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-line-numbers: true</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: true</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("tidytuesdayR") install.packages("tidyverse")</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="co">#data &lt;- tidytuesdayR::tt_load("2022-08-09")$wheels</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="st">"data/wheels"</span>)</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>highest <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span> </span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(country) <span class="sc">|&gt;</span> </span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(height <span class="sc">==</span> <span class="fu">max</span>(height, <span class="at">na.rm =</span> T),</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>         country <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Canada"</span>, <span class="st">"China"</span>, <span class="st">"Mexico"</span>, <span class="st">"Taiwan"</span>, <span class="st">"Japan"</span>, <span class="st">"Philippines"</span>, <span class="st">"UK"</span>, <span class="st">"USA"</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(country, height, diameter)</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(highest, <span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">fct_rev</span>(<span class="fu">factor</span>(country)), <span class="at">x =</span> diameter)) <span class="sc">+</span> </span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_segment</span>(<span class="fu">aes</span>(<span class="at">y =</span> country, <span class="at">yend =</span> country, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">xend =</span> diameter), <span class="at">linetype =</span> <span class="st">"dashed"</span>) <span class="sc">+</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">""</span>, <span class="at">y =</span> <span class="st">""</span>,</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>       <span class="co"># x = "Diameter of the highest ferries wheel in the country (in meter)"</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">"How far do you travel during one rotation in the highest ferries wheels?"</span>,</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>       <span class="at">caption =</span> <span class="st">"Data from ferriewheel package by Emil Hvitfeldt, #tidytuesday August 2022"</span>) <span class="sc">+</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">800</span>)) <span class="sc">+</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+
+</section>
+</section>
+
+
+<div id="quarto-appendix" class="default"><section class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1" role="doc-endnote"><p>We won’t worry about customizing anything yet and the file is empty anyways.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
