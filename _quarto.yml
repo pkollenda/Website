@@ -3,6 +3,7 @@ project:
 
 website:
   title: "Data & Development | Philipp Kollenda"
+  description: "Welcome to my website, my name is Philipp Kollenda. I am a development economist and currently finishing my PhD. Here, I write about data science, development economics and R."
   navbar:
     left:
       - pages/motivation.qmd
@@ -21,7 +22,12 @@ website:
     border: true
   # repo-url: "https://github.com/pkollenda/website/"
   # repo-actions: [issue]
+  open-graph: true
+  twitter-card: 
+    creator: "@philippkollenda"
   # google-analytics: 
+  image: pages/images/portrait.jpg
+  favicon: pages/images/favicon.png
   format:
     html:
       theme: cosmo
