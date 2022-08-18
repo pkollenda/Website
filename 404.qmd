@@ -2,6 +2,6 @@
 title: "404 - Page not found"
 ---
 
-![]("pages/images/404")
+![](pages/images/404.png){fig-align="center" width="400"}
 
-Try to [go back to the homepage](index.qmd) or search for your page.
+Try to [go back to the homepage](index.qmd) or use the search.
