@@ -19,7 +19,7 @@ I, on the other hand, was bothered by the fact that the series names were not in
 
 #### Obviously, I could just type my input in alphabetical order, but where is the fun in that?
 
-![](images/drake.jpg){fig-align="center" width="300"}
+![](images/drake.jpg){.preview-image fig-align="center" width="300"}
 
 ::: {.callout-note appearance="simple"}
 The context is not really important, so I won't go into detail on what this dataset was about. The trick is super generally and applies to many situations anyways. But you can see my final plot [on Twitter](https://twitter.com/philippkollenda) and the accompanying blog post [on my website](https://www.pkollenda.com/blog.html).
