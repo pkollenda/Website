@@ -3,4 +3,23 @@ title: "Teaching"
 image: images/profile.jpg
 ---
 
-Welcome
+![](images/ian-dooley.jpg)
+
+### PhD Level Courses (Tinbergen Institute)
+2015: Macroeconomics 1 (TA Professor Bruegemann)
+
+### Master Level Courses (Vrije Universiteit Amsterdam)
+2020: Introduction to Econometrics (TA for Professor Dobbelaere), Evaluation 4.3/5  
+2020: Applied Econometrics (TA for Professor Dobbelaere), Evaluation 4.1/5
+
+### Bachelor Level Courses (Vrije Universiteit Amsterdam)
+2022: Macroeconomics I (TA for Professor Bruegemann), Evaluation 4.9/5  
+2018-2020: Macroeconomics I (TA for Professor Bartelsman), Evaluation 3.5/5  
+2018-2020: Foundations of Macroeconomics (TA for Professor Zant), Evaluation 4.1/5  
+2018-2020: Inclusive Growth and Sustainability (TA for Professor Hoefkes and Professor Lanjouw), Evaluation 4.25/5
+
+### Thesis Supervision
+2020: Economics Bachelor Thesis: *"Does Foreign Direct Investment Promote Growth in Sub-Saharan Africa? Insights from Sectoral Decomposition"*  
+2020: Economics Master Thesis: *"Impact of Chinese FDI on Debt and Imports from China"* and *"The Effect of Educational Inequality on Income Inequality"*  
+2020: Economics Bachelor Thesis: *"The Relationship between Charity Advertisements and Misconceptions about Low-Income Countries"*  
+2019: Economics Master Thesis: *"Reassessing the Impact of Inequality on Economic Growth"*

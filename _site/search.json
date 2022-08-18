@@ -32,28 +32,42 @@
     "href": "index.html",
     "title": "Data & Development | Philipp Kollenda",
     "section": "",
-    "text": "Welcome"
+    "text": "I am a development economist, currently finishing my PhD at the Vrije Universiteit Amsterdam and the Tinbergen Institute.\nMy professional ambition is to help people and organizations combine data with rigorous methodologies to generate evidence that allows us to improve people’s livelihoods through sustainable economic development. Read more about my motivation.\nIn my research, I study how impact investors pursue financial returns and social impact; and how farmers collectively negotiate higher prices and access to value chains. I also teach and present my research.\nI also blog, mostly about data science, #RStats and cool data development economics."
   },
   {
     "objectID": "pages/teaching.html",
     "href": "pages/teaching.html",
     "title": "Teaching",
     "section": "",
-    "text": "Welcome"
+    "text": "PhD Level Courses (Tinbergen Institute)\n2015: Macroeconomics 1 (TA Professor Bruegemann)\n\n\nMaster Level Courses (Vrije Universiteit Amsterdam)\n2020: Introduction to Econometrics (TA for Professor Dobbelaere), Evaluation 4.3/5\n2020: Applied Econometrics (TA for Professor Dobbelaere), Evaluation 4.1/5\n\n\nBachelor Level Courses (Vrije Universiteit Amsterdam)\n2022: Macroeconomics I (TA for Professor Bruegemann), Evaluation 4.9/5\n2018-2020: Macroeconomics I (TA for Professor Bartelsman), Evaluation 3.5/5\n2018-2020: Foundations of Macroeconomics (TA for Professor Zant), Evaluation 4.1/5\n2018-2020: Inclusive Growth and Sustainability (TA for Professor Hoefkes and Professor Lanjouw), Evaluation 4.25/5\n\n\nThesis Supervision\n2020: Economics Bachelor Thesis: “Does Foreign Direct Investment Promote Growth in Sub-Saharan Africa? Insights from Sectoral Decomposition”\n2020: Economics Master Thesis: “Impact of Chinese FDI on Debt and Imports from China” and “The Effect of Educational Inequality on Income Inequality”\n2020: Economics Bachelor Thesis: “The Relationship between Charity Advertisements and Misconceptions about Low-Income Countries”\n2019: Economics Master Thesis: “Reassessing the Impact of Inequality on Economic Growth”"
   },
   {
     "objectID": "pages/research.html",
     "href": "pages/research.html",
     "title": "Research",
     "section": "",
-    "text": "I focus on innovative forms of financing sustainable economic development, from impact investing to agricultural finance. I also study agricultural markets, with a focus on smallholder farmer value chains in East Africa.\n\n\nFinancial Returns or Social Impact? What Motivates Impact Investors’ Lending to Firms in Low-Income Countries (Journal of Banking & Finance, 2022) link to open access version"
+    "text": "I focus on innovative forms of financing sustainable economic development, from impact investing to agricultural finance. I also study agricultural markets, with a focus on smallholder farmer value chains in East Africa."
+  },
+  {
+    "objectID": "pages/research.html#peer-reviewed-publications",
+    "href": "pages/research.html#peer-reviewed-publications",
+    "title": "Research",
+    "section": "Peer-reviewed Publications",
+    "text": "Peer-reviewed Publications\nFinancial Returns or Social Impact? What Motivates Impact Investors’ Lending to Firms in Low-Income Countries (Journal of Banking & Finance, 2022) open-access link\n\nI analyze 70,000 transactions by retail impact investors on a peer-to-peer lending platform that intermediates loans to firms in low-income countries. Loans pay interest to investors and publicize indicators of expected social impact. Financial returns significantly influence investors’ decisions: a one percentage point increase in the interest rate increases funding speed seven-fold, investment probability two-fold and transaction size by 122 Euro. Expected social impact influences investors’ perception but has no influence (for female empowerment, employees and beneficiaries) or limited influence (for turnover) on investors’ funding decisions. When all available loans pay the same interest rates, female borrowers - but not firms with many employees or beneficiaries - are more likely to be chosen, suggesting that variation in financial returns can crowd out salient dimensions of social impact. The study implies that peer-to-peer lending platforms should function as gatekeepers of social impact and cannot outsource the evaluation of social impact to retail impact investors."
+  },
+  {
+    "objectID": "pages/research.html#working-papers",
+    "href": "pages/research.html#working-papers",
+    "title": "Research",
+    "section": "Working Papers",
+    "text": "Working Papers\n\nBad News Travel Fast … and Decrease Credit Supply in Peer-to-Peer Lending\n\nUsing a new dataset of transactions on a Dutch peer-to-peer lending platform, I investigate the stability of credit supply when investors experience repayment delays. I exploiting a natural experiment, where some investors experience repayment delays in impact investment loans and show that the delays cause aﬀected investors to decrease their credit supply by 206€ on average, resulting in a shortage of credit of almost 400,000€ to borrowers unconnected to the delays. Repayment delays thus have substantial negative externalities on the ability of ﬁrms to raise capital through the peer-to-peer lending platform.\n\n\n\nRipe for Contract? Avocado contract farming in Kenya improves agricultural investments, knowledge and prices. Link to presentation\n\nWe evaluate the impact of a multi-layered contract farming intervention that connected smallholder farmers in central Kenya to avocado exporting companies, provided training in good agricultural practices and certified farmer organizations according to the global good agricultural practices (GAP) production standard. Using panel data from 2015 and 2017 we show that the intervention was successful at delivering its immediate goals. It increased the share of farmers that sold to companies, were recently trained and received the GAP certification. Contract farming significantly improved the sales prices of farmers, and knowledge of avocado-farming practices and led to increased investments into the Hass avocado variety which is in higher demand in export markets. We find suggestive, albeit not statistically significant, evidence that contract farming improved farmer income and shifted labour from family to hired labour. At the same time, contract farmers produced less of the local avocado variety, leading to a significant decrease in total quantity sold during the transition to the export-oriented Hass avocado variety. We contribute to the literature by quantifying the impact of a multi-layered contract farming intervention. Panel data allows us to estimate a doubly-robust difference-in-differences design, giving us more confidence to interpret our estimates as causal evidence of contract farming than traditional cross-sectional studies allow for."
   },
   {
     "objectID": "pages/motivation.html",
     "href": "pages/motivation.html",
     "title": "Motivation",
     "section": "",
-    "text": "I get energy from working together with others to build a better world, where prosperity is created sustainably, redistributed globally and shared by all.\nMy professional ambition is to help people and organizations combine data with rigorous methodologies to generate evidence that allows us to improve people’s livelihoods through sustainable economic development.\nTake a look at what is currently on my mind (and on my Twitter):"
+    "text": "A better tomorrow is possible.\nI get energy from working together with others to build a better world, where prosperity is created sustainably, redistributed globally and shared by all.\nMy professional ambition is to help people and organizations combine data with rigorous methodologies to generate evidence that allows us to improve people’s livelihoods through sustainable economic development.\nTake a look at what is currently on my mind (and on my Twitter)."
   },
   {
     "objectID": "pages/about.html",
@@ -67,7 +81,7 @@
     "href": "pages/presentations.html",
     "title": "Presentations",
     "section": "",
-    "text": "I enjoy presenting my work and strive to communicate my research effectively, engagingly and targeted to the audience. In the past I have experimented with web-based presentations build with R Markdown and deployed with Netifly. You can find some examples below."
+    "text": "Presentation on “Ripe for Contracts” working paper.\nPresentation of Poverty Targeting Replication for a workshop."
   },
   {
     "objectID": "blog.html",

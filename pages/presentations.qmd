@@ -3,5 +3,9 @@ title: "Presentations"
 image: images/profile.jpg
 ---
 
-# Presentations
 I enjoy presenting my work and strive to communicate my research effectively, engagingly and targeted to the audience. In the past I have experimented with web-based presentations build with R Markdown and deployed with Netifly. You can find some examples below.
+
+[Presentation on "Ripe for Contracts" working paper.](https://jolly-goldwasser-9c4a03.netlify.app/#1)  
+[Presentation of Poverty Targeting Replication for a workshop.](https://regal-selkie-bf835b.netlify.app/#1)
+
+![](images/ian-dooley.jpg)
