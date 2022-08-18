@@ -1,6 +1,6 @@
 ---
 title: "Data & Development | Philipp Kollenda"
-image: images/profile.jpg
+image: pages/images/portrait.jpg
 ---
 
 ### Welcome to my website, my name is Philipp Kollenda.

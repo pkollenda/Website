@@ -1,6 +1,6 @@
 ---
 title: "Landing Page"
-image: images/portrait.jpg
+image: pages/images/profile.jpg
 navbar: false
 page-layout: full
 draft: true
