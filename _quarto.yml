@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  site-url: "https://www.pkollenda.com"
+  site-url: "https://www.philippkollenda.com"
   title: "Data & Development | Philipp Kollenda"
   description: "Welcome to my website, my name is Philipp Kollenda. I am a development economist and currently finishing my PhD. Here, I write about data science, development economics and R."
   navbar:
@@ -11,8 +11,8 @@ website:
       - pages/research.qmd
       - pages/presentations.qmd
       - pages/teaching.qmd
-      - blog.qmd
     right:
+      - blog.qmd
       - pages/about.qmd
       - icon: github
         href: https://github.com/pkollenda
