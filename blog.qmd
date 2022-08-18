@@ -4,11 +4,13 @@ listing:
   contents: posts
   sort: "date desc"
   type: default
-  categories: true
+  categories: numbered
   sort-ui: false
   filter-ui: false
+  # max-description-length: 175
+  image-placeholder: pages/images/books.jpg
 page-layout: full
-title-block-banner: true
+title-block-banner: false
 ---
 
 

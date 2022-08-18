@@ -28,10 +28,13 @@ website:
     creator: "@philippkollenda"
   # google-analytics: 
   favicon: "pages/images/favicon.png"
-  format:
-    html:
-      theme: cosmo
-      css: styles.css
 
+# Preferred themes: Lumen, sandstone (with dark banner) or flatly & darkly
+format:
+  html:
+    theme:
+      light: flatly
+      dark: darkly
+    # css: styles.css
 
 

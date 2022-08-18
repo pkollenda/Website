@@ -9,8 +9,8 @@ I am a development economist, currently finishing my PhD at the Vrije Universite
 
 My professional ambition is to help people and organizations combine data with rigorous methodologies to generate evidence that allows us to improve people's livelihoods through sustainable economic development. Read more about [my motivation](pages/motivation.qmd).
 
-In [my research](pages/research.qmd), I study how impact investors pursue financial returns and social impact; and how farmers collectively negotiate higher prices and access to value chains. I also [teach](pages/teaching.qmd) and [present](pages/presentations.qmd) my research.
+In [my research](pages/research.qmd), I study how impact investors pursue financial returns and social impact; and how farmers collectively negotiate higher prices and access to value chains. I [teach](pages/teaching.qmd) and [present](pages/presentations.qmd) my research.
 
-I also [blog](blog.qmd), mostly about data science, #RStats and cool data for development economics.  
+I also [write shorter posts](blog.qmd), mostly about data science, #RStats and cool data for development economics.  
 
 ![](pages/images/portrait.jpg)
