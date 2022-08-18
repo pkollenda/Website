@@ -16,10 +16,16 @@ website:
         href: https://github.com/pkollenda
       - icon: twitter
         href: https://twitter.com/philippkollenda
-format:
-  html:
-    theme: cosmo
-    css: styles.css
+  page-footer: 
+    center: "Copyright 2022, Philipp Kollenda" 
+    border: true
+  # repo-url: "https://github.com/pkollenda/website/"
+  # repo-actions: [issue]
+  # google-analytics: 
+  format:
+    html:
+      theme: cosmo
+      css: styles.css
 
 
 
