@@ -1,5 +1,6 @@
 ---
 title: "Blog"
+image: pages/images/portrait.jpg
 listing:
   contents: posts
   sort: "date desc"
