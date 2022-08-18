@@ -29,12 +29,13 @@ website:
   # google-analytics: 
   favicon: "pages/images/favicon.png"
 
-# Preferred themes: Lumen, sandstone (with dark banner) or flatly & darkly
 format:
   html:
+    # page-layout: full
     theme:
       light: flatly
       dark: darkly
     # css: styles.css
+# Other nice themes: lumen, sandstone (with dark banner) or flatly & darkly
 
 
