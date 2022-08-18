@@ -1,9 +1,9 @@
 ---
 title: "Motivation"
-image: images/profile.jpg
+image: images/portrait.jpg
 ---
 
-![](images/ian-dooley.jpg)
+![](images/madagascar-front.jpg)
 
 # A better tomorrow is possible.
 

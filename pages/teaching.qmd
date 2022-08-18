@@ -1,9 +1,9 @@
 ---
 title: "Teaching"
-image: images/profile.jpg
+image: images/portrait.jpg
 ---
 
-![](images/ian-dooley.jpg)
+![](images/amsterdam-skyline.jpg)
 
 ### PhD Level Courses (Tinbergen Institute)
 2015: Macroeconomics 1 (TA Professor Bruegemann)

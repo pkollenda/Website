@@ -32,7 +32,7 @@
     "href": "index.html",
     "title": "Data & Development | Philipp Kollenda",
     "section": "",
-    "text": "I am a development economist, currently finishing my PhD at the Vrije Universiteit Amsterdam and the Tinbergen Institute.\nMy professional ambition is to help people and organizations combine data with rigorous methodologies to generate evidence that allows us to improve people’s livelihoods through sustainable economic development. Read more about my motivation.\nIn my research, I study how impact investors pursue financial returns and social impact; and how farmers collectively negotiate higher prices and access to value chains. I also teach and present my research.\nI also blog, mostly about data science, #RStats and cool data development economics."
+    "text": "I am a development economist, currently finishing my PhD at the Vrije Universiteit Amsterdam and the Tinbergen Institute.\nMy professional ambition is to help people and organizations combine data with rigorous methodologies to generate evidence that allows us to improve people’s livelihoods through sustainable economic development. Read more about my motivation.\nIn my research, I study how impact investors pursue financial returns and social impact; and how farmers collectively negotiate higher prices and access to value chains. I also teach and present my research.\nI also blog, mostly about data science, #RStats and cool data for development economics."
   },
   {
     "objectID": "pages/teaching.html",
@@ -53,7 +53,7 @@
     "href": "pages/research.html#peer-reviewed-publications",
     "title": "Research",
     "section": "Peer-reviewed Publications",
-    "text": "Peer-reviewed Publications\nFinancial Returns or Social Impact? What Motivates Impact Investors’ Lending to Firms in Low-Income Countries (Journal of Banking & Finance, 2022) open-access link\n\nI analyze 70,000 transactions by retail impact investors on a peer-to-peer lending platform that intermediates loans to firms in low-income countries. Loans pay interest to investors and publicize indicators of expected social impact. Financial returns significantly influence investors’ decisions: a one percentage point increase in the interest rate increases funding speed seven-fold, investment probability two-fold and transaction size by 122 Euro. Expected social impact influences investors’ perception but has no influence (for female empowerment, employees and beneficiaries) or limited influence (for turnover) on investors’ funding decisions. When all available loans pay the same interest rates, female borrowers - but not firms with many employees or beneficiaries - are more likely to be chosen, suggesting that variation in financial returns can crowd out salient dimensions of social impact. The study implies that peer-to-peer lending platforms should function as gatekeepers of social impact and cannot outsource the evaluation of social impact to retail impact investors."
+    "text": "Peer-reviewed Publications\n\nFinancial Returns or Social Impact? What Motivates Impact Investors’ Lending to Firms in Low-Income Countries (Journal of Banking & Finance, 2022 | open-access link)\n\nI analyze 70,000 transactions by retail impact investors on a peer-to-peer lending platform that intermediates loans to firms in low-income countries. Loans pay interest to investors and publicize indicators of expected social impact. Financial returns significantly influence investors’ decisions: a one percentage point increase in the interest rate increases funding speed seven-fold, investment probability two-fold and transaction size by 122 Euro. Expected social impact influences investors’ perception but has no influence (for female empowerment, employees and beneficiaries) or limited influence (for turnover) on investors’ funding decisions. When all available loans pay the same interest rates, female borrowers - but not firms with many employees or beneficiaries - are more likely to be chosen, suggesting that variation in financial returns can crowd out salient dimensions of social impact. The study implies that peer-to-peer lending platforms should function as gatekeepers of social impact and cannot outsource the evaluation of social impact to retail impact investors."
   },
   {
     "objectID": "pages/research.html#working-papers",
@@ -74,7 +74,7 @@
     "href": "pages/about.html",
     "title": "About",
     "section": "",
-    "text": "About me"
+    "text": "Photographs are mostly my own or from Unsplash photographers, subject to the Unsplash license."
   },
   {
     "objectID": "pages/presentations.html",

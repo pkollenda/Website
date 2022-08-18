@@ -11,6 +11,6 @@ My professional ambition is to help people and organizations combine data with r
 
 In [my research](pages/research.qmd), I study how impact investors pursue financial returns and social impact; and how farmers collectively negotiate higher prices and access to value chains. I also [teach](pages/teaching.qmd) and [present](pages/presentations.qmd) my research.
 
-I also [blog](blog.qmd), mostly about data science, #RStats and cool data development economics.  
+I also [blog](blog.qmd), mostly about data science, #RStats and cool data for development economics.  
 
 ![](pages/images/portrait.jpg)

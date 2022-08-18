@@ -1,0 +1,14 @@
+{
+  "hash": "a9cffc654c80e4583b97b237e83a0d68",
+  "result": {
+    "markdown": "---\ntitle: \"A fancy title\"\nsubtitle: \"#tidytuesday data visualization with R, ggplot and A COOL PACKAGE\"\ndate: \"2022-08-16\"\n#image: \"2022-08-16_psychometric.png\"\ncategories: [tidytuesday, dataviz, how-to]\n---\n\n\n\n::: {.cell layout=\"[[1,1]]\"}\n\n```{.r .cell-code .code-overflow-scroll}\n# datalist <- tidytuesdayR::tt_load(\"2022-08-16\")\n# write_rds(datalist, here(\"posts\", \"tt2022-08-16_psychometric\", \"data\", \"psychometric\"))\ndatalist <- read_rds(here(\"posts\", \"tt2022-08-16_psychometric\", \"data\", \"psychometric\"))\ncharacters <- datalist$characters\nstats <- datalist$psych_stats\n```\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\ndata <- characters |> filter()\n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

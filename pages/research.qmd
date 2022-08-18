@@ -1,14 +1,14 @@
 ---
 title: "Research"
-image: images/profile.jpg
+image: images/portrait.jpg
 ---
 
 I focus on innovative forms of financing sustainable economic development, from impact investing to agricultural finance. I also study agricultural markets, with a focus on smallholder farmer value chains in East Africa.
 
-![](images/ian-dooley.jpg)
+![](images/oloololo.jpg)
 
 ## Peer-reviewed Publications
-Financial Returns or Social Impact? What Motivates Impact Investors’ Lending to Firms in Low-Income Countries (Journal of Banking & Finance, 2022) [open-access link](https://doi.org/10.1016/j.jbankfin.2021.106224)
+#### Financial Returns or Social Impact? What Motivates Impact Investors’ Lending to Firms in Low-Income Countries (Journal of Banking & Finance, 2022 | [open-access link](https://doi.org/10.1016/j.jbankfin.2021.106224))
 
 > I analyze 70,000 transactions by retail impact investors on a peer-to-peer lending platform that intermediates loans to firms in low-income countries. Loans pay interest to investors and publicize indicators of expected social impact. Financial returns significantly influence investors' decisions: a one percentage point increase in the interest rate increases funding speed seven-fold, investment probability two-fold and transaction size by 122 Euro. Expected social impact influences investors' perception but has no influence (for female empowerment, employees and beneficiaries) or limited influence (for turnover) on investors' funding decisions. When all available loans pay the same interest rates, female borrowers - but not firms with many employees or beneficiaries - are more likely to be chosen, suggesting that variation in financial returns can crowd out salient dimensions of social impact. The study implies that peer-to-peer lending platforms should function as gatekeepers of social impact and cannot outsource the evaluation of social impact to retail impact investors.
 

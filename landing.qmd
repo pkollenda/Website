@@ -1,0 +1,21 @@
+---
+title: "Landing Page"
+image: images/portrait.jpg
+navbar: false
+draft: true
+---
+
+## Choose your adventure.
+
+
+::::{.columns}
+
+:::{.column width="45%"}
+Data & Development
+:::
+
+:::{.column width="45%"}
+Philipp Kollenda
+:::
+
+::::
