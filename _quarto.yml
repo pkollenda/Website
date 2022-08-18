@@ -27,8 +27,8 @@ website:
   twitter-card: 
     creator: "@philippkollenda"
   # google-analytics: 
-  image: pages/images/portrait.jpg
-  favicon: pages/images/favicon.png
+  image: "pages/images/portrait.jpg"
+  favicon: "pages/images/favicon.png"
   format:
     html:
       theme: cosmo
