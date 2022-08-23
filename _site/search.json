@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "posts/rp_bundesliga-table/index.html",
+    "href": "posts/rp_bundesliga-table/index.html",
+    "title": "Excess attraction in the Bundesliga",
+    "section": "",
+    "text": "Footnotes\n\nTechnically, I calculate excess attraction as the difference between the actual number of members a club has and the number of members that we would expect if the total number of all club members are redistributed according to the share of population which live closest to each club.↩︎\nThe value calculated by Ansgar Wolsing.↩︎"
+  },
+  {
     "objectID": "posts/tt2022-08-09_ferriswheels/index.html",
     "href": "posts/tt2022-08-09_ferriswheels/index.html",
     "title": "How far does that ferris wheel roll?",
@@ -88,6 +95,6 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "Neat little tricks, Episode 1\n\n\n\n\nneat-tricks\n\n\n\n\n\n\n\n\n\n\n\nAug 17, 2022\n\n\nPhilipp Kollenda\n\n\n\n\n\n\n  \n\n\n\n\n\n#tidytuesday data visualization with R, ggplot and A COOL PACKAGE\n\n\n\n\ntidytuesday\n\n\ndataviz\n\n\nhow-to\n\n\n\n\n\n\n\n\n\n\n\nAug 16, 2022\n\n\nPhilipp Kollenda\n\n\n\n\n\n\n  \n\n\n\n\n\n#tidytuesday data visualization with R, ggplot and ggimage\n\n\n\n\ntidytuesday\n\n\ndataviz\n\n\nhow-to\n\n\n\n\n\n\n\n\n\n\n\nAug 9, 2022\n\n\nPhilipp Kollenda\n\n\n\n\n\n\n  \n\n\n\n\n\nAnd then spend hours tweaking it.\n\n\n\n\nquarto\n\n\nhow-to\n\n\n\n\n\n\n\n\n\n\n\nAug 6, 2022\n\n\nPhilipp Kollenda\n\n\n\n\n\n\nNo matching items"
+    "text": "Which teams would have the most members if location was the only thing that mattered?\n\n\n\n\ninteractive\n\n\nfootball\n\n\n\n\n\n\n\n\n\n\n\n\nAug 18, 2022\n\n\nPhilipp Kollenda\n\n\n\n\n\n\n  \n\n\n\n\n\nNeat little tricks, Episode 1\n\n\n\n\nneat-tricks\n\n\n\n\n\n\n\n\n\n\n\nAug 17, 2022\n\n\nPhilipp Kollenda\n\n\n\n\n\n\n  \n\n\n\n\n\n#tidytuesday data visualization with R, ggplot and A COOL PACKAGE\n\n\n\n\ntidytuesday\n\n\ndataviz\n\n\nhow-to\n\n\n\n\n\n\n\n\n\n\n\nAug 16, 2022\n\n\nPhilipp Kollenda\n\n\n\n\n\n\n  \n\n\n\n\n\n#tidytuesday data visualization with R, ggplot and ggimage\n\n\n\n\ntidytuesday\n\n\ndataviz\n\n\nhow-to\n\n\n\n\n\n\n\n\n\n\n\nAug 9, 2022\n\n\nPhilipp Kollenda\n\n\n\n\n\n\n  \n\n\n\n\n\nAnd then spend hours tweaking it.\n\n\n\n\nquarto\n\n\nhow-to\n\n\n\n\n\n\n\n\n\n\n\nAug 6, 2022\n\n\nPhilipp Kollenda\n\n\n\n\n\n\nNo matching items"
   }
 ]

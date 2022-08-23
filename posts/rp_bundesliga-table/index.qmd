@@ -1,0 +1,87 @@
+---
+title: "Excess attraction in the Bundesliga"
+subtitle: "Which teams would have the most members if location was the only thing that mattered?"
+date: "2022-08-18"
+categories: [interactive, football]
+resources: "*.png"
+image: "images/table.png"
+---
+
+# How many members would Bundesliga clubs have if everyone supported their closest club?
+
+In August 2022, [Ansgar Wolsing](https://twitter.com/_ansgar) shared a visualization that shows how many Germans live closest to each football club in the first and second division ([here is the tweet](#the-tweet)). Interestingly, RB Leipzig came out on top which shows two things: first, there are few football clubs in eastern Germany in the first two divisions relative to the population (Magdeburg, Rostock, Union Berlin, Hertha BSC Berlin and RB Leibzig) and second, the number of people who live close to a club does not necessarily translate into many fans or members. After all, in 2021/2022 RB Leibzig only had the 8th most fans in their Red Bull Arena out of the 18 clubs in the first division. The club also only has 21 members, [because of reasons...](https://www.dw.com/en/rb-leipzig-red-bull-ceo-dietrich-mateschitz-and-politics-its-complicated/a-50208315).
+
+Obviously, RB Leibzig is an extreme example. But still, I was curious how membership numbers relate to the share of the German population that live closest to each club.^[Technically, I calculate **excess attraction** as the difference between the actual number of members a club has and the number of members that we would expect if the total number of all club members are redistributed according to the share of population which live closest to each club.]
+
+The table below shows the answer. Have fun investigating, you can search for your favorite club, filter by league and sort by excess attraction, membership and population.^[The value calculated by Ansgar Wolsing.]
+
+```{r}
+#| include: false
+library(tidyverse)
+library(reactable)
+library(reactablefmtr)
+library(htmltools)
+library(tippy)
+library(here)
+```
+
+```{r}
+#| message: false
+#| echo: true
+data <- read_csv(here("posts", "rp_bundesliga-table", "data", "club-data.csv"), show_col_types = FALSE)
+data <- data |> 
+  mutate(share_population = population / sum(population),
+         expected_members = share_population * sum(members), 
+         excess_members = members - expected_members)
+```
+
+```{r}
+#| message: false
+#| code-fold: true
+with_tooltip <- function(value, tooltip, ...) {
+  div(style = "text-decoration: underline; text-decoration-style: dotted; cursor: help",
+      tippy(value, tooltip, ...))
+}
+
+reactable(
+  data[, c("league", "name", "excess_members", "members", "population")],
+  searchable = TRUE,
+  defaultColDef = colDef(format = colFormat(separators = TRUE), sortable = TRUE, align = "center"),
+  columns = list(
+    league = colDef("League", width = 50, sortable = FALSE, filterable = TRUE,
+                    filterInput = function(values, name) {
+                      tags$select(
+                        onchange = sprintf("Reactable.setFilter('league-select', '%s', event.target.value || undefined)", name),
+                        tags$option(value = "", "All"),
+                        lapply(unique(values), tags$option),
+                        "aria-label" = sprintf("Filter %s", name),
+                        style = "width: 100%; height: 28px;"
+                        )
+                      }
+                    ),
+    name = colDef(cell = function(value) {
+      image <- img(src = sprintf("team_icons/%s.png", value), style = "height: 24px;", alt = value)
+      tagList(
+        div(style = "display: inline-block; width: 60px; text-align: center;", image),
+        value
+      )
+    }, name = "Club", width = 210, sortable = FALSE, align = "left"),
+    excess_members = colDef(header = with_tooltip("Excess attraction", "The difference between the number of members and the expected number of members if everyone would support the club closest to where they live."), 
+                            cell = data_bars(data, number_fmt = scales::label_comma(), text_position = "outside-end", fill_color = c("#E74C3C", "#2C3E50")), minWidth = 200, sortable = TRUE),
+    members = colDef("Members", cell = data_bars(data, text_position = "outside-end", number_fmt = scales::label_comma(), background = NULL, fill_color = "#C9C5BA"), sortable = TRUE),
+    population = colDef("Potential reach", cell = data_bars(data, text_position = "outside-end", number_fmt = scales::label_comma(), background = NULL, fill_color = "#C9C5BA"), sortable = TRUE)),
+  bordered = TRUE, highlight = TRUE, showSortable = TRUE, wrap = FALSE,
+  elementId = "league-select",
+  defaultPageSize = 9,
+  theme = espn()
+) |> 
+  add_title("Club Membership", font_size = 24, letter_spacing = 3, word_spacing = 3, margin = margin(0, 0, 10, 0)) |> 
+  add_subtitle("Bayern Munich has 215,000 more members than we would expect given the number of Germans for whom Bayern is the closest club.", font_size = 16, font_weight = "normal") |> 
+  add_source("Based on and inspired by Ansgar Wolsing (@_ansgar). Additional membership data from transfermarkt.de", align = "right", font_size = 12, font_color = "gray")
+```
+
+\
+
+### The tweet that inspired this table {#the-tweet}  
+
+<blockquote class="twitter-tweet"><p lang="de" dir="ltr">Was wäre wenn jeder den nächstgelegenen Verein in der 1. oder 2. Bundesliga unterstützte?<br><br>⚽️ Jeder Kreis gibt an, für wie viele Menschen das Stadion des jeweiligen Vereins das nächste ist.<br><br>🥇 RB Leipzig<br>🥈 Bayern München<br>🥉 Eintracht Frankfurt<a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> <a href="https://twitter.com/hashtag/datavisualization?src=hash&amp;ref_src=twsrc%5Etfw">#datavisualization</a> <a href="https://twitter.com/hashtag/maps?src=hash&amp;ref_src=twsrc%5Etfw">#maps</a> <a href="https://t.co/L8VPZ1tBoz">pic.twitter.com/L8VPZ1tBoz</a></p>&mdash; Ansgar Wolsing (@_ansgar) <a href="https://twitter.com/_ansgar/status/1558463386597445634?ref_src=twsrc%5Etfw">August 13, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

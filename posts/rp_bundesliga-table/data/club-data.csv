@@ -1,0 +1,37 @@
+name,club_color,icon,population,venue,league,date,members
+RB Leipzig,#dadada,"<img src=""/Users/pkollenda/MyLearn/git_forks/bydata_visualizations/football-clubs-voronoi-de/team_icons/RB Leipzig.png"" width=25>",6279647.5,Zentralstadion,1,19.05.2009,21
+FC Bayern Munich,#DC052D,"<img src=""/Users/pkollenda/MyLearn/git_forks/bydata_visualizations/football-clubs-voronoi-de/team_icons/FC Bayern Munich.png"" width=25>",4145059.5,Allianz Arena,1,27.02.1900,293000
+Eintracht Frankfurt,#E1000F,"<img src=""/Users/pkollenda/MyLearn/git_forks/bydata_visualizations/football-clubs-voronoi-de/team_icons/Eintracht Frankfurt.png"" width=25>",3970582.5,Waldstadion,1,08.03.1899,100000
+VfB Stuttgart,#E32219,"<img src=""/Users/pkollenda/MyLearn/git_forks/bydata_visualizations/football-clubs-voronoi-de/team_icons/VfB Stuttgart.png"" width=25>",3816124,Mercedes-Benz Arena,1,09.09.1893,75000
+Hertha BSC Berlin,#005CA9,"<img src=""/Users/pkollenda/MyLearn/git_forks/bydata_visualizations/football-clubs-voronoi-de/team_icons/Hertha BSC.png"" width=25>",3254597.5,Olympiastadion Berlin,1,25.07.1892,40051
+1. FC Köln,#ED1C24,"<img src=""/Users/pkollenda/MyLearn/git_forks/bydata_visualizations/football-clubs-voronoi-de/team_icons/1. FC Köln.png"" width=25>",3157477,RheinEnergie Stadion,1,13.02.1948,117962
+SV Werder Bremen,#1D9053,"<img src=""/Users/pkollenda/MyLearn/git_forks/bydata_visualizations/football-clubs-voronoi-de/team_icons/SV Werder Bremen.png"" width=25>",3108784,Weserstadion,1,04.02.1899,40376
+1. FC Union Berlin,#D4011D,"<img src=""/Users/pkollenda/MyLearn/git_forks/bydata_visualizations/football-clubs-voronoi-de/team_icons/1. FC Union Berlin.png"" width=25>",3049589,Stadion An der Alten Försterei,1,20.01.1966,40531
+FC Schalke 04,#004D9D,"<img src=""/Users/pkollenda/MyLearn/git_forks/bydata_visualizations/football-clubs-voronoi-de/team_icons/FC Schalke 04.png"" width=25>",2886387,Veltins Arena,1,04.05.1904,160023
+Arminia Bielefeld,#034E95,"<img src=""/Users/pkollenda/MyLearn/git_forks/bydata_visualizations/football-clubs-voronoi-de/team_icons/Arminia Bielefeld.png"" width=25>",2743018.5,Bielefelder Alm,2,03.05.1905,15009
+Borussia Dortmund,#FDE100,"<img src=""/Users/pkollenda/MyLearn/git_forks/bydata_visualizations/football-clubs-voronoi-de/team_icons/Borussia Dortmund.png"" width=25>",2738762,Westfalenstadion,1,19.12.1909,157000
+SpVgg Greuther Fürth,#2EA641,"<img src=""/Users/pkollenda/MyLearn/git_forks/bydata_visualizations/football-clubs-voronoi-de/team_icons/SpVgg Greuther Fürth.png"" width=25>",2719458,Trolli Arena,2,23.09.1903,2550
+FC St. Pauli,#93755E,"<img src=""/Users/pkollenda/MyLearn/git_forks/bydata_visualizations/football-clubs-voronoi-de/team_icons/FC St. Pauli.png"" width=25>",2711955.5,Millerntor-Stadion,2,15.05.1910,30400
+SC Paderborn 07,#045CA9,"<img src=""/Users/pkollenda/MyLearn/git_forks/bydata_visualizations/football-clubs-voronoi-de/team_icons/SC Paderborn 07.png"" width=25>",2286122,Benteler-Arena,2,01.06.1985,5338
+1. FC Kaiserslautern,#E2001A,"<img src=""/Users/pkollenda/MyLearn/git_forks/bydata_visualizations/football-clubs-voronoi-de/team_icons/1. FC Kaiserslautern.png"" width=25>",2258427,Fritz-Walter-Stadion,2,02.06.1900,21000
+SC Freiburg,black,"<img src=""/Users/pkollenda/MyLearn/git_forks/bydata_visualizations/football-clubs-voronoi-de/team_icons/SC Freiburg.png"" width=25>",2175701.5,Dreisamstadion,1,30.05.1904,37000
+SSV Jahn Regensburg,#E30614,"<img src=""/Users/pkollenda/MyLearn/git_forks/bydata_visualizations/football-clubs-voronoi-de/team_icons/SSV Jahn Regensburg.png"" width=25>",2169854.5,Arena Regensburg,2,04.10.1907,3600
+1. FSV Mainz 05,#ED1C24,"<img src=""/Users/pkollenda/MyLearn/git_forks/bydata_visualizations/football-clubs-voronoi-de/team_icons/1. FSV Mainz 05.png"" width=25>",2118265.5,Mewa Arena,1,16.03.1905,14200
+Bayer 04 Leverkusen,#E32221,"<img src=""/Users/pkollenda/MyLearn/git_forks/bydata_visualizations/football-clubs-voronoi-de/team_icons/Bayer 04 Leverkusen.png"" width=25>",2118004.5,BayArena,1,01.07.1904,27462
+Hannover 96,#169D33,"<img src=""/Users/pkollenda/MyLearn/git_forks/bydata_visualizations/football-clubs-voronoi-de/team_icons/Hannover 96.png"" width=25>",2043371,Niedersachsenstadion,2,12.04.1896,20500
+Fortuna Düsseldorf,#FF0000,"<img src=""/Users/pkollenda/MyLearn/git_forks/bydata_visualizations/football-clubs-voronoi-de/team_icons/Fortuna Düsseldorf.png"" width=25>",2027299.5,Merkur Spielarena,2,05.05.1895,25247
+FC Augsburg,#BA3733,"<img src=""/Users/pkollenda/MyLearn/git_forks/bydata_visualizations/football-clubs-voronoi-de/team_icons/FC Augsburg.png"" width=25>",2015820.5,WWK Arena,1,08.08.1907,19847
+1. FC Heidenheim,#E2001A,"<img src=""/Users/pkollenda/MyLearn/git_forks/bydata_visualizations/football-clubs-voronoi-de/team_icons/1. FC Heidenheim.png"" width=25>",1932242.5,Voith-Arena,2,27.05.1972,2550
+Borussia Mönchengladbach,#000000,"<img src=""/Users/pkollenda/MyLearn/git_forks/bydata_visualizations/football-clubs-voronoi-de/team_icons/Borussia Mönchengladbach.png"" width=25>",1694377.5,Borussia-Park,1,01.08.1900,94100
+Karlsruher SC,#013798,"<img src=""/Users/pkollenda/MyLearn/git_forks/bydata_visualizations/football-clubs-voronoi-de/team_icons/Karlsruher SC.png"" width=25>",1624827.5,Wildparkstadion,2,16.10.1952,11126
+SV Sandhausen,#000000,"<img src=""/Users/pkollenda/MyLearn/git_forks/bydata_visualizations/football-clubs-voronoi-de/team_icons/SV Sandhausen.png"" width=25>",1579579.5,Hardtwaldstadion,2,01.08.1916,950
+Holstein Kiel,#045A9E,"<img src=""/Users/pkollenda/MyLearn/git_forks/bydata_visualizations/football-clubs-voronoi-de/team_icons/Holstein Kiel.png"" width=25>",1509455.5,Holstein-Stadion,2,07.10.1900,2685
+Hamburger SV,#0060AF,"<img src=""/Users/pkollenda/MyLearn/git_forks/bydata_visualizations/football-clubs-voronoi-de/team_icons/Hamburger SV.png"" width=25>",1407623.5,Volksparkstadion,2,29.09.1887,85360
+FC Hansa Rostock,#E53616,"<img src=""/Users/pkollenda/MyLearn/git_forks/bydata_visualizations/football-clubs-voronoi-de/team_icons/F.C. Hansa Rostock.png"" width=25>",1405748,Ostseestadion,2,28.12.1965,20585
+SV Darmstadt 98,#004E9E,"<img src=""/Users/pkollenda/MyLearn/git_forks/bydata_visualizations/football-clubs-voronoi-de/team_icons/SV Darmstadt 98.png"" width=25>",1385899.5,Stadion am Böllenfalltor,2,22.05.1898,8000
+Eintracht Braunschweig,#F5E33D,"<img src=""/Users/pkollenda/MyLearn/git_forks/bydata_visualizations/football-clubs-voronoi-de/team_icons/Eintracht Braunschweig.png"" width=25>",1341366.5,Eintracht-Stadion,2,15.12.1895,5304
+1. FC Nürnberg,#AA122C,"<img src=""/Users/pkollenda/MyLearn/git_forks/bydata_visualizations/football-clubs-voronoi-de/team_icons/1. FC Nürnberg.png"" width=25>",1323691.5,Max-Morlock-Stadion,2,04.05.1900,21023
+VfL Bochum,#005CA9,"<img src=""/Users/pkollenda/MyLearn/git_forks/bydata_visualizations/football-clubs-voronoi-de/team_icons/VfL Bochum.png"" width=25>",1206545,Ruhrstadion,1,26.07.1848,20000
+1. FC Magdeburg,#036AB2,"<img src=""/Users/pkollenda/MyLearn/git_forks/bydata_visualizations/football-clubs-voronoi-de/team_icons/1. FC Magdeburg.png"" width=25>",1128758.5,MDCC-Arena,2,22.12.1965,9596
+TSG 1899 Hoffenheim,#1C63B7,"<img src=""/Users/pkollenda/MyLearn/git_forks/bydata_visualizations/football-clubs-voronoi-de/team_icons/TSG Hoffenheim.png"" width=25>",943219.5,Prezero-Arena,1,01.07.1899,11000
+VfL Wolfsburg,#65B32E,"<img src=""/Users/pkollenda/MyLearn/git_forks/bydata_visualizations/football-clubs-voronoi-de/team_icons/VfL Wolfsburg.png"" width=25>",615950.5,Volkswagen Arena,1,12.09.1945,21500
