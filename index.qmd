@@ -5,7 +5,7 @@ image: pages/images/portrait.jpg
 
 ### Welcome to my website, my name is Philipp Kollenda.
 
-I am a development economist, currently finishing my PhD at the Vrije Universiteit Amsterdam and the Tinbergen Institute.
+I am a development economist, currently finishing my PhD at the Vrije Universiteit Amsterdam and the Tinbergen Institute. I also work as a sustainable finance consultant for the World Bank Group's Finance, Competitiveness and Innovation Global Practice.
 
 My professional ambition is to help people and organizations combine data with rigorous methodologies to generate evidence that allows us to improve people's livelihoods through sustainable economic development. Read more about [my motivation](pages/motivation.qmd).
 
