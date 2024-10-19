@@ -1,0 +1,15 @@
+{
+  "hash": "4e710a7c3e7491d872b931bca436e120",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"A fancy title\"\nsubtitle: \"#tidytuesday data visualization with R, ggplot and A COOL PACKAGE\"\ndate: \"2022-08-16\"\n#image: \"2022-08-16_psychometric.png\"\ncategories: [tidytuesday, dataviz, how-to]\ndraft: true\n---\n\n\n\n::: {.cell layout=\"[[1,1]]\"}\n\n```{.r .cell-code .code-overflow-scroll}\n# data <- tidytuesdayR::tt_load(\"2022-08-23\")$chips\n# write_rds(data, here(\"posts\", \"tt2022-08-23_chips\", \"data\", \"chip_summary\"))\n# \n# data <- read_csv(here(\"posts\", \"tt2022-08-23_chips\", \"data\", \"chip_dataset.csv\"))\n# write_rds(data, here(\"posts\", \"tt2022-08-23_chips\", \"data\", \"chips\"))\n\ndata <- read_rds(here(\"posts\", \"tt2022-08-23_chips\", \"data\", \"chips\"))[-1]\n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
