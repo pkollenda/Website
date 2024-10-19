@@ -1,0 +1,30 @@
+---
+title: "A fancy title"
+subtitle: "#tidytuesday data visualization with R, ggplot and A COOL PACKAGE"
+date: "2022-08-16"
+#image: "2022-08-16_psychometric.png"
+categories: [tidytuesday, dataviz, how-to]
+draft: true
+---
+
+```{r}
+#| include: false
+library(here)
+library(tidyverse)
+```
+
+```{r}
+#| message: false
+#| code-overflow: scroll
+#| layout: [[1, 1]]
+
+# data <- tidytuesdayR::tt_load("2022-08-23")$chips
+# write_rds(data, here("posts", "tt2022-08-23_chips", "data", "chip_summary"))
+# 
+# data <- read_csv(here("posts", "tt2022-08-23_chips", "data", "chip_dataset.csv"))
+# write_rds(data, here("posts", "tt2022-08-23_chips", "data", "chips"))
+
+data <- read_rds(here("posts", "tt2022-08-23_chips", "data", "chips"))[-1]
+```
+
+
