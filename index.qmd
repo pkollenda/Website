@@ -1,16 +1,16 @@
 ---
 title: "Data & Development | Philipp Kollenda"
-image: pages/images/portrait.jpg
+image: pages/images/portrait_2025.png
 ---
 
-### Welcome to my website, my name is Philipp Kollenda.
+### Welcome to my website.
 
-I am a development economist, currently finishing my PhD at the Vrije Universiteit Amsterdam and the Tinbergen Institute. I also work as a sustainable finance consultant for the World Bank Group's Finance, Competitiveness and Innovation Global Practice.
+I am an economist dedicated to shaping an economic and financial system where prosperity is created sustainably, distributed globally and shared by all. In my work, I focus on generating rigorous research, and translating it into actionable policy and financial innovation. Read more about [my motivation](pages/motivation.qmd).
 
-My professional ambition is to help people and organizations combine data with rigorous methodologies to generate evidence that allows us to improve people's livelihoods through sustainable economic development. Read more about [my motivation](pages/motivation.qmd).
+My core expertise lies in sustainable finance, development economics and macroeconomics. In [my PhD research](pages/research.qmd), I investigated how impact investors pursue financial returns and social impact; and how farmers collectively negotiate higher prices and access to value chains. I used a mix of impact measurement, econometrics and causal inference methods. I also [taught](pages/teaching.qmd) and [presented](pages/presentations.qmd) my research at international conferences.
 
-In [my research](pages/research.qmd), I study how impact investors pursue financial returns and social impact; and how farmers collectively negotiate higher prices and access to value chains. I [teach](pages/teaching.qmd) and [present](pages/presentations.qmd) my research.
+I currently work as a sustainable finance consultant for the World Bank Group's Long-Term Finance team in the Prosperity Global Practice. There, I co-developed policy frameworks (FAB/REACH) for sustainability-linked financial instruments, advised client countries on MRV systems and central banks on climate risk analysis, directly engaging with ministries and public and private sector stakeholders. I thrive in bridging the gap between academic research, policy development, and financial practice to drive systemic change.
 
-I also [write shorter posts](blog.qmd), mostly about data science, #RStats and cool data for development economics.  
+I also [write shorter posts](blog.qmd), mostly about data science, #RStats and cool data for development economics.
 
-![](pages/images/portrait.jpg)
+![](pages/images/portrait_2025.png)

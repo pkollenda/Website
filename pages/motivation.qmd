@@ -11,9 +11,9 @@ My professional ambition is to help people and organizations combine data with r
 
 ![](images/madagascar-front.jpg)
 
-#### Take a look at what is currently ~~on my mind~~ on my Twitter
+<!-- #### Take a look at what is currently ~~on my mind~~ on my Twitter -->
 
-```{=html}
-<a class="twitter-timeline" data-width="500" data-height="500" href="https://twitter.com/philippkollenda?ref_src=twsrc%5Etfw">Tweets by philippkollenda</a>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-```
+<!-- ```{=html} -->
+<!-- <a class="twitter-timeline" data-width="500" data-height="500" href="https://twitter.com/philippkollenda?ref_src=twsrc%5Etfw">Tweets by philippkollenda</a> -->
+<!-- <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+<!-- ``` -->

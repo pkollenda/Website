@@ -4,9 +4,6 @@ image: images/avataaar.png
 about:
   template: jolla
   links:
-    - icon: twitter
-      text: Twitter
-      href: https://twitter.com/philippkollenda
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/in/kollenda/
@@ -17,4 +14,4 @@ about:
 
 This site has been created entirely with open-source software, using [Quarto](https://quarto.org/), R and is hosted on [Netlify](https://www.netlify.com/). If you want to use this website as a template to build your own, you can find the source code on [my Github page](https://github.com/pkollenda/website).
 
-Photographs are mostly my own or from [Unsplash](https://unsplash.com/) photographers, subject to the [Unsplash license](https://unsplash.com/license). Avatar created with the [avataaars generator](https://getavataaars.com/), designed by [Pablo Stanley](https://twitter.com/pablostanley).
+Photographs are either my own or from [Unsplash](https://unsplash.com/) photographers, subject to the [Unsplash license](https://unsplash.com/license). Avatar created with the [avataaars generator](https://getavataaars.com/), designed by [Pablo Stanley](https://twitter.com/pablostanley).

@@ -4,7 +4,7 @@ project:
 website:
   site-url: "https://www.philippkollenda.com"
   title: "Data & Development | Philipp Kollenda"
-  description: "Welcome to my website, my name is Philipp Kollenda. I am a development economist and currently finishing my PhD. Here, I write about data science, development economics and R."
+  description: "Welcome to my website. I am an economist working for the World Bank Group's Long-Term Finance team in the Prosperity Global Practice. On here, I write about data science, economics, sustainable finance and programming."
   navbar:
     left:
       - pages/motivation.qmd
@@ -16,16 +16,14 @@ website:
       - pages/about.qmd
       - icon: github
         href: https://github.com/pkollenda
-      - icon: twitter
-        href: https://twitter.com/philippkollenda
+      - icon: linkedin
+        href: https://www.linkedin.com/in/kollenda/
   page-footer: 
-    center: "Copyright 2022, Philipp Kollenda" 
+    center: "Copyright 2025, Philipp Kollenda" 
     border: true
   # repo-url: "https://github.com/pkollenda/website/"
   # repo-actions: [issue]
   open-graph: true
-  twitter-card: 
-    creator: "@philippkollenda"
   # google-analytics: 
   favicon: "pages/images/favicon.png"
 
