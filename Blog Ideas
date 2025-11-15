@@ -1,0 +1,37 @@
+Blog Ideas JAJAJAJA
+
+** Website **
+How to build a website in under ~30~ 10 minutes:
+- build a very simple website with two pages, a picture and a navbar in Quarto
+- deploy website to quarto.pub
+
+--> LINKS TO:
+
+
+Move your website from Wordpress to Quarto:
+- How to move *my* :) website from Wordpress to Quarto.
+- Questions: 1) Can I implement all the things on my wishlist? 2) Where do I host the website and the material? 3) How do I link my own domain name? 
+- Wishlist: Welcome page with background picture. Header pictures that move through the screen. A nice consistent navbar (on top). A footer with contact information on the bottom.
+
+--> LINKS TO: detailed post on hosting. many detailed posts on markdown / css / revealjs / quarto tricks
+
+
+** Blogging **
+Build a website for your blog. Or a blog for your website?
+
+
+** Version control **
+What I have learned from using GIT solo
+
+What I have learned from using GIT non-solo
+
+
+
+** Shiny ** 
+
+Should you automate?
+- Make a simple calculator based on this (https://xkcd.com/1205/) comic that tells the user whether they should automate a given task.
+- Inputs: estimated time to do the task manually? how often will you repeat the task per X for how many years? how much time will it cost you to automate? have you done the task manually before? have you automated something similar before?
+
+- How happy is the Bundestag (crossover with NLP)
+- Where to host your Shiny App
