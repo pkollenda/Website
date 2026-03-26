@@ -13,4 +13,4 @@ I currently work as a sustainable finance consultant for the World Bank Group's 
 
 I also [write shorter posts](blog.qmd), mostly about data science, #RStats and cool data for development economics.
 
-![](pages/images/portrait_2025.png)
+<!-- ![](pages/images/portrait_2025.png) -->
